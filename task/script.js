@@ -11,7 +11,9 @@ const js = () => {
   return src(path.js.src, { sourcemaps: dev })
     .pipe(
       plumber({
-        errorHandler: notify.onError(),
+        errorHandler: notify.onError({
+          title:'js'
+        }),
       })
     )
     .pipe(babel())

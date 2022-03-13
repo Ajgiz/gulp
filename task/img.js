@@ -11,7 +11,9 @@ const img = () => {
   return src(path.img.src)
     .pipe(
       plumber({
-        errorHandler: notify.onError(),
+        errorHandler: notify.onError({
+          title:'img'
+        }),
       })
     )
     .pipe(newer(path.img.dest))

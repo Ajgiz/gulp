@@ -11,7 +11,9 @@ const font = () => {
   return src(path.font.src)
     .pipe(
       plumber({
-        errorHandler: notify.onError(),
+        errorHandler: notify.onError({
+          title:'font'
+        }),
       })
     )
     .pipe(newer(path.img.dest))

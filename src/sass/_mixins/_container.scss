@@ -1,0 +1,13 @@
+@mixin wrapper {
+  max-width: $wrapper-max;
+  min-width: $wrapper-min;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  padding: $container-padding;
+  margin: 0 auto;
+}

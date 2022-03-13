@@ -1,7 +1,47 @@
-body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: larger;
-  background: url("../img/Caesar_Clown_Anime_Infobox.png") no-repeat 
+@import "./config/variables.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-@import "./css-part/*.scss";
-@import "./test/jui.scss";
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+}
+.vhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+.wrapper {
+  background-color: $color-bg-base;
+  color: $color-text-base;
+  max-width: $wrapper-max;
+  min-width: $wrapper-min;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: $container-max-width;
+  padding: $container-padding;
+  margin: 0 auto;
+}
+
+@import "block/*.scss";

@@ -9,7 +9,7 @@
     "build": "gulp --production"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 3 versions"
   ],
   "babel": {
     "presets": [

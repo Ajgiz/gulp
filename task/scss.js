@@ -14,10 +14,12 @@ const webpCss = require("gulp-webp-css");
 const { dev } = require('../config/mode');
 
 const scss = () => {
-  return src(path.scss.src, { sourcemaps: dev })
+  return src(path.scss.src, { sourcemaps: true })
     .pipe(
       plumber({
-        errorHandler: notify.onError(),
+        errorHandler: notify.onError({
+          title:'scss'
+        }),
       })
     )
     .pipe(sassGlob())
@@ -25,11 +27,11 @@ const scss = () => {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(mediaQueries())
-    .pipe(dest(path.scss.dest, { sourcemaps: dev }))
+    .pipe(dest(path.scss.dest, { sourcemaps: true }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(csso())
     .pipe(gulpSize({ title: "size scss:" }))
-    .pipe(dest(path.scss.dest, { sourcemaps: dev }));
+    .pipe(dest(path.scss.dest, { sourcemaps: true }));
 };
 
 module.exports = scss;

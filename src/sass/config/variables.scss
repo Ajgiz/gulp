@@ -1,0 +1,22 @@
+$wrapper-max: 1366px;
+$wrapper-min: 280px;
+
+$container-max-width: 1318px;
+$container-padding: 15px;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$font-family-base: "serif";
+$font-size-base: 16px;
+$font-weight-base: 400;
+$font-style-base: normal;
+
+$color-text-base: "black";
+$color-bg-base: "white";
