@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 30px;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    margin: 0px 0px 0px 11px;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    padding: 0px 0px 0px 20px;
+  }
+}
+.action {
+  display: flex;
+  align-items: center;
+  &__button {
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 7px 28px;
+    text-transform: uppercase;
+  }
+  &__tel {
+    margin: 0px 0px 0px 8px;
+  }
+}

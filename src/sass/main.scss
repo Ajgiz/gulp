@@ -1,4 +1,5 @@
 @import "./config/variables.scss";
+@import "./config/global.scss";
 
 *,
 *::before,
@@ -13,6 +14,9 @@ body {
   background-color: #fff;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
+  position: relative;
+  scroll-behavior: smooth;
+  color: $color-text-base;
 }
 .vhidden {
   position: absolute;
@@ -24,18 +28,37 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 img {
   max-width: 100%;
 }
 .wrapper {
   background-color: $color-bg-base;
-  color: $color-text-base;
   max-width: $wrapper-max;
   min-width: $wrapper-min;
   min-height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
